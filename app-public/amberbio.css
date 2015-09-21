@@ -1,0 +1,24 @@
+
+
+
+
+a.current:link  {
+	text-decoration: none; 
+	color: #b8d6cd
+}
+
+a.current:visited {
+	text-decoration: none; 
+	color: #b8d6cd
+}
+
+a.current:hover {
+	text-decoration: underline; 
+	color: #ef6767
+}
+
+a.current:active {
+	text-decoration: underline; 
+	color: #ef6767
+}
+
