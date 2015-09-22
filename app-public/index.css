@@ -6,18 +6,33 @@ body {
 	background-color : rgb(222,235,247);
 }
 
+svg {
+	width : 100px;
+	height : 100px;
+}
+
+.logo-text {
+	position : relative;
+	left : 30px;	
+	bottom : 15px;
+	color : rgb(8,69,148);
+	font-weight : 300;
+	font-size : 50px;
+	/* text-shadow : 0 0 6px rgb(80,80,80); */
+}
+
 img {
     border-width: 0;
 }
 
 .header {
 	display : block;
-	height : 82px;
-	background-color : rgb(80,80,80);
+	height : 120px;
+	background-color : rgb(242,242,242);
 	/*background-image : url('../img/grass3.jpg');*/
 	color : rgb(220,220,220);
 	padding : 20px 50px;
-	box-shadow : inset 0 -15px 10px -10px rgba(0,0,0,.5);
+	/* box-shadow : inset 0 -15px 10px -10px rgba(0,0,0,.5); */
 }
 
 .header > h1, .header > h1 > a {
@@ -25,7 +40,7 @@ img {
 	color : rgb(250,155,0);
 	font-weight : 300;
 	font-size : 50px;
-	text-shadow : 0 0 6px rgb(80,80,80);
+	/* text-shadow : 0 0 6px rgb(80,80,80); */
 }
 
 .header > h1 > a:hover {
@@ -41,7 +56,7 @@ img {
 
 .header-nav a {
 	margin-right : 40px;
-	text-shadow : 0 0 4px rgb(80,80,80);
+	/* text-shadow : 0 0 4px rgb(80,80,80); */
 }
 
 .tagline {
