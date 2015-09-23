@@ -152,3 +152,9 @@ section > div > h2 {
 .person-photo {
 	      width : 150px;
 }
+
+.figure {
+	width : 90%;
+	max-width : 1200px;
+	margin: 100px auto 0 auto;
+}
