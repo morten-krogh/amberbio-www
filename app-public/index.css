@@ -101,9 +101,6 @@ section {
 
 a {
 	text-decoration : none;
-	transition: color 0.25s ease-in-out 0;
-	-webkit-transition: color 0.25s ease-in-out 0;
-	-moz-transition: color 0.25s ease-in-out 0;
 	cursor : pointer;
 }
 
@@ -117,7 +114,6 @@ section > div > h2 {
 	font-family: 'Helvetica Neue Bold', Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	font-weight: bold;
-	/*text-transform : uppercase;*/
 }
 
 @media screen and (max-width: 1200px) {
@@ -151,4 +147,8 @@ section > div > h2 {
 	.header-nav a {
 		 margin-right : 20px;
 	}
+}
+
+.person-photo {
+	      width : 150px;
 }
