@@ -51,5 +51,5 @@ p {
 table {
         margin : 2em auto;
         border-spacing : 0.5em;
-        border-collapse :
+        border-collapse : initial;
 }

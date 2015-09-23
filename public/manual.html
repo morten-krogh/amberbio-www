@@ -71,25 +71,80 @@
 
   <section>
     <h1 id="table-of-contents">Table of contents</h1>
-    <a  class="table_of_content_link" href="#version">Version</a>
-    <a  class="table_of_content_link" href="#price">Price</a>
-    <a  class="table_of_content_link" href="#feedback">Feedback</a>
-    <a  class="table_of_content_link" href="#privacy">Privacy</a>
-    <a  class="table_of_content_link" href="#navigation">Navigation</a>
-    <a  class="table_of_content_link" href="#projects-and-data-sets">Projects and data sets</a>
-    <a  class="table_of_content_link" href="#the-active-data-set">The active data set</a>
-    <a  class="table_of_content_link" href="#import-of-data">Import of data</a>
-    <a  class="table_of_content_link" href="#import-of-files">Import of files</a>
-    <a  class="table_of_content_link" href="#parsing-import-files">Parsing import files</a>
-    <a  class="table_of_content_link" href="#file-format-of-txt-files">File format of txt files</a>
-    <a  class="table_of_content_link" href="#result-files">Result files</a>
-    <a  class="table_of_content_link" href="#backup-and-sharing-of-projects">Backup and sharing of projects</a>
-    <a  class="table_of_content_link" href="#user-name-and-emails">User name and emails</a>
-    <a  class="table_of_content_link" href="#anova">Anova</a>
-    <a  class="table_of_content_link" href="#pairwise-test">Pairwise test</a>
-    <a  class="table_of_content_link" href="#paired-test">Paired test</a>
-    <a  class="table_of_content_link" href="#linear-regression">Linear regression</a>
-    <a  class="table_of_content_link" href="#multiple-hypothesis-testing">Multiple hypothesis testing</a>
+
+    <div class="table-of-content-link">
+      <a href="#version">Version</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a href="#price">Price</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a href="#feedback">Feedback</a>
+    </div>   
+    <div class="table-of-content-link">
+      <a href="#privacy">Privacy</a>
+    </div>
+    <div class="table-of-content-link">
+      <a href="#navigation">Navigation</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a href="#projects-and-data-sets">Projects and data sets</a>
+    </div>
+    
+    <div class="table-of-content-link">
+      <a href="#the-active-data-set">The active data set</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a href="#import-of-data">Import of data</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a href="#import-of-files">Import of files</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a href="#parsing-import-files">Parsing import files</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a href="#file-format-of-txt-files">File format of txt files</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a href="#result-files">Result files</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a href="#backup-and-sharing-of-projects">Backup and sharing of projects</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a href="#user-name-and-emails">User name and emails</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a href="#anova">Anova</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a href="#pairwise-test">Pairwise test</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a href="#paired-test">Paired test</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a href="#linear-regression">Linear regression</a>
+    </div>
+
+    <div class="table-of-content-link">
+      <a  href="#multiple-hypothesis-testing">Multiple hypothesis testing</a>
+    </div>
   </section>
 
   <section id="version">
@@ -234,158 +289,140 @@ The app keeps all imported files until they are deleted by the user.
       The second file type contains factors, i.e., groupings, for the samples. Factors can be imported into a project at any time and is not part of the initial creation of the project. The first row contains sample names. The first column contains factor names. The values are the levels for the factor and sample. The upper left field can be anything. The factor names must be distinct and the sample names can come in any order. All samples of the project must be present, but there might be extra samples which will be ignored. An example factor table is shown below
     </p>
 
-<table>
-        <tr>
-                <td>Anything</td>
-                <td>Sample 1</td>
-                <td>Sample 2</td>
-        </tr>
-        <tr>
-                <td>Gender</td>
-                <td>Male</td>
-                <td>Female</td>
-        </tr>
-        <tr>
-                <td>Disease</td>
-                <td>Cancer</td>
-                <td>Alzheimer</td>
-        </tr>
-        <tr>
-                <td>Age</td>
-                <td>55</td>
-                <td>78</td>
-        </tr>
-</table>
+    <table>
+      <tr>
+        <td>Anything</td>
+        <td>Sample 1</td>
+        <td>Sample 2</td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>Male</td>
+        <td>Female</td>
+      </tr>
+      <tr>
+        <td>Disease</td>
+        <td>Cancer</td>
+        <td>Alzheimer</td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td>55</td>
+        <td>78</td>
+      </tr>
+    </table>
 
-<p>
-The third file type contains molecule annotations and it can be imported at any time and is not part of the creation of the project. The first row contains the name of the molecule annotation. The first column must contain all the molecule names. The order of the rows is arbitrary and there can be extra molecules. Extra molecules are ignored. An example molecule annotation table is shown below
-</p>
+    <p>
+      The third file type contains molecule annotations and it can be imported at any time and is not part of the creation of the project. The first row contains the name of the molecule annotation. The first column must contain all the molecule names. The order of the rows is arbitrary and there can be extra molecules. Extra molecules are ignored. An example molecule annotation table is shown below
+    </p>
 
-<table>
-        <tr>
-                <td>Anything</td>
-                <td>Unigene</td>
-                <td>Chromosome</td>
-        </tr>
-        <tr>
-                <td>Molecule 7</td>
-                <td>Hs.551713</td>
-                <td>18</td>
-        </tr>
-        <tr>
-                <td>Molecule 3</td>
-                <td>Hs.518267</td>
-                <td>3</td>
-        </tr>
-        <tr>
-                <td>Molecule 2</td>
-                <td>Hs.300701</td>
-                <td>6</td>
-        </tr>
-        <tr>
-                <td>Molecule 1</td>
-                <td>Hs.691131</td>
-                <td>10</td>
-        </tr>
-</table>
-</div>
+    <table>
+      <tr>
+        <td>Anything</td>
+        <td>Unigene</td>
+        <td>Chromosome</td>
+      </tr>
+      <tr>
+        <td>Molecule 7</td>
+        <td>Hs.551713</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>Molecule 3</td>
+        <td>Hs.518267</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Molecule 2</td>
+        <td>Hs.300701</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Molecule 1</td>
+        <td>Hs.691131</td>
+        <td>10</td>
+      </tr>
+    </table>
+  </section>
 
-<h2 id="result-files"><a href="#table-of-contents">Result files</a></h2>
-<div class="content">
-<p>
-Result files are created by the app. The result files are figures and tables and have the file extension "txt", "pdf", or "png".
-The result files are kept on the page
-<span class="app-page">Result files</span>.
-The result files can be sent by email, opened in another app, or exported to a cloud storage.
-</p>
-</div>
+  <section id="result-files">
+    <h1><a href="#table-of-contents">Result files</a></h1>
+    <p>
+      Result files are created by the app. The result files are figures and tables and have the file extension "txt", "pdf", or "png".
+      The result files are kept on the page
+      <span class="app-page">Result files</span>.
+      The result files can be sent by email, opened in another app, or exported to a cloud storage.
+    </p>
+  </section>
 
-<h2 id="backup-and-sharing-of-projects"><a href="#table-of-contents">Backup and sharing of projects</a></h2>
-<div class="content">
-<p>
-Projects can be exported to a database file on the page <span class="app-page">Export projects</span>. The database file has the extension "sqlite". The file
-can be used for backup and to transfer projects to other devices. The file can be sent by email or exported to a cloud storage.
-</p>
-</div>
+  <section id="backup-and-sharing-of-projects">
+    <h1><a href="#table-of-contents">Backup and sharing of projects</a></h1>
+    <p>
+      Projects can be exported to a database file on the page <span class="app-page">Export projects</span>. The database file has the extension "sqlite". The file
+      can be used for backup and to transfer projects to other devices. The file can be sent by email or exported to a cloud storage.
+    </p>
+  </section>
 
-<h2 id="name-and-emails"><a href="#table-of-contents">Name and emails</a></h2>
-<div class="content">
-<p>
-On the page <span class="app-page">User</span>, a name and a list of emails can be typed. There are no user accounts in the app. The name is only used for
-comments in the result files and the project notes. The emails are used as suggested emails when a file is sent by email from the app. The actual destination emails can always be changed before sending the email.
-</p>
-</div>
+  <section id="name-and-emails">
+    <h1><a href="#table-of-contents">Name and emails</a></h1>
+    <p>
+      On the page <span class="app-page">User</span>, a name and a list of emails can be typed. There are no user accounts in the app. The name is only used for comments in the result files and the project notes. The emails are used as suggested emails when a file is sent by email from the app. The actual destination emails can always be changed before sending the email.
+    </p>
+  </section>
 
-<h2 id="anova"><a href="#table-of-contents">Anova</a></h2>
-<div class="content">
-<p>
-The Anova test is performed on the selected levels of a factor. The selected levels are highlighted, and the anova test is performed by tapping the blue factor name.
-For each molecule a standard Anova test is performed by removing samples with missing values, calculating the F-statistic as the ratio of between-groups variation
-divided by the within-groups variation. The p-value is the upper tail of the cumulative F-distribution.
-</p>
-</div>
+  <section id="anova">
+    <h1><a href="#table-of-contents">Anova</a></h1>
+    <p>
+      The Anova test is performed on the selected levels of a factor. The selected levels are highlighted, and the anova test is performed by tapping the blue factor name. For each molecule a standard Anova test is performed by removing samples with missing values, calculating the F-statistic as the ratio of between-groups variation divided by the within-groups variation. The p-value is the upper tail of the cumulative F-distribution.
+    </p>
+  </section>
 
-<h2 id="pairwise-test"><a href="#table-of-contents">Pairwise test</a></h2>
-<div class="content">
-<p>
-After selecting a factor, any number of pairwise tests between two levels can be selected in the table. The pairwise test will be performed on all pairs
-and presented in a table. The t-test is a standard student t-test with equal variance. The p-value from the Wilcoxon test, which is the same as the Mann-Whitney
-test, is calculated as an exact value for small sample size and by the Normal distribution approximation for large sample sizes.
+  <section id="pairwise-test">
+    <h1><a href="#table-of-contents">Pairwise test</a></h1>
+    <p>
+      After selecting a factor, any number of pairwise tests between two levels can be selected in the table. The pairwise test will be performed on all pairs and presented in a table. The t-test is a standard student t-test with equal variance. The p-value from the Wilcoxon test, which is the same as the Mann-Whitney test, is calculated as an exact value for small sample size and by the Normal distribution approximation for large sample sizes.
 The p-values are two-sided.
-</p>
-</div>
+    </p>
+  </section>
 
-<h2 id="paired-test"><a href="#table-of-contents">Paired test</a></h2>
-<div class="content">
-<p>
-A pairing factor must be selected. A pairing factor must have levels that exactly two samples belongs to. Levels with any other number of associated samples are ignored.
-Two samples with the same level of the pairing factor is a pair. An example of a pairing factor is "Patient" and the levels are the patient ids or names. for each patient, two samples are measured.
-</p>
+  <section id="paired-test">
+    <h1><a href="#table-of-contents">Paired test</a></h1>
+    <p>
+      A pairing factor must be selected. A pairing factor must have levels that exactly two samples belongs to. Levels with any other number of associated samples are ignored. Two samples with the same level of the pairing factor is a pair. An example of a pairing factor is "Patient" and the levels are the patient ids or names. for each patient, two samples are measured.
+    </p>
 
-<p>The comparison factor is the factor for which the levels will be compared. An example of a comparison factor is "Time" with the levels "morning" and "evening". In this case, a pairwise test will be performed between evening and morning for each patient.
-</p>
+    <p>
+      The comparison factor is the factor for which the levels will be compared. An example of a comparison factor is "Time" with the levels "morning" and "evening". In this case, a pairwise test will be performed between evening and morning for each patient.
+    </p>
 
-<p>The t-test is performed by subtracting the values of the paired samples in the two selected comparison levels. The p-value is two-sided and tests the null hypothesis that the difference between the comparison levels is zero.
-</p>
+    <p>
+      The t-test is performed by subtracting the values of the paired samples in the two selected comparison levels. The p-value is two-sided and tests the null hypothesis that the difference between the comparison levels is zero.
+    </p>
 
-<p>
-Tapping the rows in the table leads to a figure of the paired values.
-</p>
-</div>
+    <p>
+      Tapping the rows in the table leads to a figure of the paired values.
+    </p>
+  </section>
 
-<h2 id="linear-regression"><a href="#table-of-contents">Linear regression</a></h2>
-<div class="content">
-<p>
-For the selected factor, the levels with a numeric interpretation are chosen. A level can be converted to a number if it starts with, or is, a numeric values, such as
-"5 days" or "12.3". For each molecule, the sample with a numeric level and a non-missing value are used for the linear regression. The intercept and slope are
-calculated by least square regression. The p-value is an Anova p-value and tests the null-hypothesis that the slope is zero, i.e. low p-values imply that there is a trend with a non-zero slope. The Anova test is performed by calculating a F-statistic as the ratio where the numerator is the variation between the line and a simple mean value, and the denominator is the residual variation from the fitted line. A large F-statistic, and correspondingly low p-value, implies that the line is a much better fit than a single mean value.
-</p>
-</div>
+  <section id="linear-regression">
+    <h1><a href="#table-of-contents">Linear regression</a></h1>
+    <p>
+      For the selected factor, the levels with a numeric interpretation are chosen. A level can be converted to a number if it starts with, or is, a numeric values, such as "5 days" or "12.3". For each molecule, the sample with a numeric level and a non-missing value are used for the linear regression. The intercept and slope are calculated by least square regression. The p-value is an Anova p-value and tests the null-hypothesis that the slope is zero, i.e. low p-values imply that there is a trend with a non-zero slope. The Anova test is performed by calculating a F-statistic as the ratio where the numerator is the variation between the line and a simple mean value, and the denominator is the residual variation from the fitted line. A large F-statistic, and correspondingly low p-value, implies that the line is a much better fit than a single mean value.
+    </p>
+  </section>
 
-<h2 id="multiple-hypothesis-testing"><a href="#table-of-contents">Multiple hypothesis testing</a></h2>
-<div class="content">
-<p>
-Multiple hypothesis testing is performed using the Benjamini-Hochberg false discovery rate method. The columns named false discovery rate contains the q-values
-of the molecules.
-</p>
-<p>
-A histogram of the p-values can be seen by tapping "histogram". High frequencies for the low p-values imply a significant difference between the groups.
-</p>
-</div>
+  <section id="multiple-hypothesis-testing">
+    <h1><a href="#table-of-contents">Multiple hypothesis testing</a></h1>
+    <p>
+      Multiple hypothesis testing is performed using the Benjamini-Hochberg false discovery rate method. The columns named false discovery rate contains the q-values of the molecules.
+    </p>
 
-
-
-
-
-
+    <p>
+      A histogram of the p-values can be seen by tapping "histogram". High frequencies for the low p-values imply a significant difference between the groups.
+    </p>
+  </section>
 
 
 </article>
-
-
-
-
-
-
 </body>
 </html>
