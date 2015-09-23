@@ -14,7 +14,7 @@ a:hover {
 	color : rgb(253,174,97);
 }
 
-h1, .logo-text {
+h1, h1 > a, .logo-text {
 	color : rgb(49,54,149);
 }
 
@@ -22,7 +22,7 @@ section > div > h2 {
 	color : rgb(69,117,180);
 }
 
-.logo-text:hover {
+.logo-text:hover, .app-page {
 	color : rgb(215,25,28);
 }
 
