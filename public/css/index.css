@@ -178,19 +178,12 @@ td, th {
        	font-size: 110%;
 }
 
-@media screen and (max-width: 800px) {
-
-       .thumbnail img:hover {
-       		  width : 100%;
-	}		   
-}
-
 .container {
-	   margin : 50px auto;
+	   margin : 20px auto;
 }
 
 .carousel {
-	  width : 800px;
+	  width : 700px;
 	  margin : 0 auto;
 }
 
