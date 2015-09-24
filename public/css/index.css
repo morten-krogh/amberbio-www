@@ -15,9 +15,9 @@ a:hover {
 }
 
 h1, h1 > a, .logo-text {
-	color : rgb(49,54,149);
+    color : rgb(49,54,149);
 }
-
+   
 section > div > h2 {
 	color : rgb(69,117,180);
 }
@@ -80,7 +80,7 @@ img {
 
 article {
 	display : block;
-	padding : 50px 0;
+	padding : 30px 0;
 }
 
 article > hgroup {
@@ -175,5 +175,59 @@ td, th {
 .table-of-content-link {
         margin : 10px auto 0 20px;
         text-decoration: none;
-        font-size: 110%;
+       	font-size: 110%;
+}
+
+@media screen and (max-width: 800px) {
+
+       .thumbnail img:hover {
+       		  width : 100%;
+	}		   
+}
+
+.container {
+	   margin : 50px auto;
+}
+
+.carousel {
+	  width : 800px;
+	  margin : 0 auto;
+}
+
+.carousel-inner {
+		margin-bottom : 30px;
+}
+
+.item  {
+       background-color : white;
+		margin-bottom : 120px;
+}
+
+.carousel-caption {
+		bottom: -120px;
+		color : black;
+}
+
+.carousel-indicators {
+		bottom: -30px;
+}
+
+.carousel-indicators li {
+  background-color: rgba(70,70,70,.25);
+}
+
+.carousel-indicators .active {
+	background-color : rgb(26,150,65);
+}
+
+.carousel-control.left, .carousel-control.right {
+		  background-image : none; 
+		  color : rgb(26,150,65);
+}
+
+.carousel-inner > .item > img {
+      border : thick solid black;
+      border-radius : 10px;
+      width: 70%;
+      margin: auto;
 }
