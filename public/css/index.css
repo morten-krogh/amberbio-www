@@ -46,11 +46,14 @@ svg {
 }
 
 .iphone-framed-1 {
-	       width : 20%;
+	       width : 350px;
+	       display : inline-block;
 }
 
 .iphone-framed-2 {
-		 width : 40%;
+	       display : inline-block;
+	       width : 600px;
+	       margin : 0 0px 0 0;
 }
 
 img {
