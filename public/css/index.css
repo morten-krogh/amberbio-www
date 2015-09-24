@@ -52,12 +52,12 @@ img {
 .header {
 	display : block;
 	height : auto;
-	padding : 20px 50px 10px 50px;
+	padding : 10px 50px 10px 50px;
 }
 
 .header-nav a {
 	float : left;
-	margin : 3px 60px 3px 0;
+	margin : 0 60px 3px 0;
 }
 
 .tagline {
@@ -179,25 +179,25 @@ td, th {
 }
 
 .container {
-	   margin : 20px auto;
+	   margin : 10px auto;
 }
 
 .carousel {
-	  width : 700px;
+	  width : 80%;
 	  margin : 0 auto;
 }
 
 .carousel-inner {
-		margin-bottom : 30px;
+		margin-bottom : 20px;
 }
 
 .item  {
        background-color : white;
-		margin-bottom : 120px;
+		margin-bottom : 100px;
 }
 
 .carousel-caption {
-		bottom: -120px;
+		bottom: -100px;
 		color : black;
 }
 
