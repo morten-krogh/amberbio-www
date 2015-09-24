@@ -45,8 +45,12 @@ svg {
 	font-size : 50px;
 }
 
-.iphone-framed {
-	       width : 30%;
+.iphone-framed-1 {
+	       width : 20%;
+}
+
+.iphone-framed-2 {
+		 width : 40%;
 }
 
 img {
