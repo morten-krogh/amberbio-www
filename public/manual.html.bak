@@ -225,7 +225,7 @@ The app keeps all imported files until they are deleted by the user.
   <section id="import-of-files">
     <h1><a href="#table-of-contents">Import of files</a></h1>
     <p>
-      The app can import files with extension "txt" or "sqlite". The "txt" files represent tables of data supplied by the user. The "sqlite" is a database file that has been exported from the app at an earlier time. The "sqlite" files are used for backup and to transfer a project from one device to another.
+      The app can import files with extension "txt" or "sqlite". The "txt" files represent tables of data supplied by the user. The "sqlite" is a database file that has been exported from the app at an earlier time. The "sqlite" files are used for backup and to transfer a project from one device to antoher.
     </p>
 
     <p>
