@@ -30,6 +30,7 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size : 18px;
     margin : 0;
+    line-height : normal;
 }
 
 svg {
@@ -247,7 +248,7 @@ td, th {
 @media only screen and (min-width : 768px) {
 
     .header {
-	padding : 10px 25px 10px 25px;
+	padding : 15px 25px 10px 25px;
     }
 
     .header-nav a {
@@ -275,7 +276,7 @@ td, th {
 @media only screen and (min-width : 992px) {
 
     .header {
-	padding : 10px 40px 10px 40px;
+	padding : 20px 40px 10px 40px;
     }
 
     .header-nav a {
