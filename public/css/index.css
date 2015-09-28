@@ -193,11 +193,11 @@ td, th {
     }
     
     .iphone-framed-1 {
-        width : 35%	
+        width : 30%	
     }
 
     .iphone-framed-2 {
-       	width : 55%;  
+       	width : 53%;  
     }
 
     section {
@@ -292,7 +292,7 @@ td, th {
     }
     
     section {
-       	margin : 20px 40px 40px 40px;
+       	margin : 20px 40px 10px 40px;
     }
 
     .carousel {
@@ -315,7 +315,7 @@ td, th {
     }
 
     .iphone-framed-2 {
-	width : 600px;
+	width : 580px;
     }
     
     .carousel {
