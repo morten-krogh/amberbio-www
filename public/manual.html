@@ -232,8 +232,8 @@ user.
 
     <p>
       Importing a file by "opening" it in another app is done by tapping the file in the other app
-      and selecting the Amberbio app. A typical use case is to send a file as an email attachment to
-      the user's own email account and then opening the email in the Mail app on the device.
+      and selecting the Amberbio app. A typical use case is to open an email attachment by tapping
+      the attachment in the Mail app.
     </p>
 
     <p>
@@ -262,9 +262,9 @@ user.
       "\r\n") and the cells are separated by tabs or commas. The file extension should be "txt" in
       any case. The app tries to find the separator by first searching for tabs. If there are tabs,
       the app tries to read the file as a tab separated file. If there are no tabs, it tries to read
-      the file as a comma separated file. There must not be tabs within the content of the cells
-      themselves and if there are commas within the cells, the file must be tab separated. The three
-      types of "txt" files are described below.
+      the file as a comma separated file. Tabs are not allowed within the cells. If there are commas
+      within the cells, the file must be tab separated. The three types of "txt" files are described
+      below.
     </p>
 
     <p>
@@ -305,11 +305,11 @@ user.
 
     <p>
       The second file type contains factors for the samples. Factors can be imported into a project
-      at any time and is not part of the initial creation of the project. The first row contains
-      sample names. The first column contains factor names. The values are the levels for the factor
-      and sample. The upper left field can be anything. The factor names must be distinct and the
-      sample names can come in any order. All samples of the project must be present. Extra samples
-      will be ignored. An example factor table is shown below
+      at any time and are not part of the initial creation of the project. The first row of the
+      factor file contains sample names. The first column contains factor names. The values are the
+      levels for the factor and sample. The upper left field can be anything. The factor names must
+      be distinct and the sample names can come in any order. All samples of the project must be
+      present. Extra samples will be ignored. An example factor table is shown below
     </p>
 
     <table>
@@ -428,16 +428,18 @@ user.
   <section id="paired-test">
     <h1><a href="#table-of-contents">Paired test</a></h1>
     <p>
-      A pairing factor must be selected. A pairing factor must have levels that exactly two samples
-      belongs to. Levels with any other number of associated samples are ignored. Two samples with
-      the same level of the pairing factor is a pair. An example of a pairing factor is "Patient"
-      and the levels are the patient ids or names. for each patient, two samples are measured.
+      A pairing factor must be selected. Samples with the same level for the pairing factor can be
+      paired.  An example of a pairing factor is "Patient" and the levels are the patient ids or
+      names. For each patient, two or more samples are measured.
     </p>
 
     <p>
-      The comparison factor is the factor for which the levels will be compared. An example of a
-      comparison factor is "Time" with the levels "morning" and "evening". In this case, a pairwise
-      test will be performed between evening and morning for each patient.
+      The comparison factor is the factor for which the levels will be compared. When two levels of
+      the comparison factor are compared, the pairs of samples are defined as follows. For each
+      pairing factor level, there must be exactly one sample for each of the two comparison levels
+      with that particular pairing factor level. An example of a comparison factor is "Time" with
+      the levels "morning" and "evening". In this case, a pairwise test will be performed between
+      the evening and morning samples for each patient.
     </p>
 
     <p>
