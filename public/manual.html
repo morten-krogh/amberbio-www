@@ -510,9 +510,9 @@ user.
 
     <p>
       When a fixed training set is chosen, the classifier is tested on all remaining samples, both
-      those with real levels within the levels of the classifier and the samples with other
-      levels. The latter type of samples will always be incorrectly classified, but it is still
-      often useful to know their predicted level.
+      those with real levels within the levels of the classifier and the samples with levels unknown
+      to the classifier. The latter type of samples will always be incorrectly classified, but it is
+      still often useful to know their predicted level.
     </p>
 
     <p>
@@ -531,6 +531,11 @@ user.
       classifier. In the special case where k is equal to the number of samples, k-fold cross
       validation is equal to leave-one-out cross validation.
     </p>
+
+    <p>
+      In case of ambiguity in the k nearest neighbors due to ties in the distances, the classifier
+      makes an arbitrary, but non-random, choice. This situation practically never occurs in real
+      biological data.
   </section-manual>
   
   
