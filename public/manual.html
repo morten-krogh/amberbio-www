@@ -145,6 +145,10 @@
     <div class="table-of-content-link">
       <a  href="#multiple-hypothesis-testing">Multiple hypothesis testing</a>
     </div>
+
+    <div class="table-of-content-link">
+      <a  href="#knn">k nearest neighbor classification</a>
+    </div>
   </section-manual>
 
   <section-manual id="version">
@@ -502,8 +506,9 @@ user.
   <section-manual id="knn">
     <h1><a href="#table-of-contents">k nearest neighbor classification</a></h1>
     <p>
-      The k nearest neighbor classifier classifies samples into two or more classes. The class membership is taken from a factor;
-      a factor and at least two levels must be chosen for the classifier.
+      The k nearest neighbor classifier separates samples into two or more classes. The classes are
+      the levels of a factor. The first step in the classification is to select a factor and at
+      least two levels.
     </p>
 
     <p>
@@ -517,7 +522,7 @@ user.
 
     <p>
       The distance measure is euclidean distance. Only molecules without missing values in the
-      entire training and test set are included in the distance calculation.
+      combined training set and test set are included in the distance calculation.
     </p>
 
     <p>
@@ -527,32 +532,32 @@ user.
 
     <p>
       When a fixed training set is chosen, the classifier is tested on all remaining samples, both
-      those with real levels within the levels of the classifier and those with levels unknown to
-      the classifier. The latter type of samples will always be incorrectly classified, but it is
-      still often useful to know their predicted levels. For instance, if the classifier has the
-      levels "sick" and "healthy", it might be useful to get a classification of "borderline"
-      samples into either "healthy" or "sick".
+      those with actual levels matching the levels of the classifier and those with actual levels
+      different from the levels known to the classifier. The latter type of samples will always be
+      incorrectly classified. However, often it is still useful to know their predicted levels. For
+      instance, if the classifier has the levels "sick" and "healthy", it might be useful to
+      classify "borderline" samples into either "healthy" or "sick".
     </p>
 
     <p>
       For leave-one-out cross validation, each sample is left out and tested with the remaining
-      samples as the training set. In that way, each sample obtains one classified level which can be
-      compared to the real level. Leave-one-out classification only uses the samples with levels
-      that are present in the classifier.
+      samples as the training set. In that way, each sample obtains one classified level which can
+      be compared to the real level. Leave-one-out classification only uses the samples with levels
+      known to the classifier.
     </p>
 
     <p>
-      For k-fold cross validation, the samples are divided randomly into k subsets of more or less
+      For k-fold cross validation, the samples are divided randomly into k subsets of almost
       equal size; if the number of samples is not divisible by k, some subsets will be one sample
       larger than other subsets.  Each subset is tested on a classifier trained by the remaining
       samples. In that way, each sample obtains one classified level which can be compared to the
-      real level. Cross validation only uses the samples with levels that are present in the
+      real level. Cross validation only uses the samples with levels that are known to the
       classifier.
     </p>
 
     <p>
       In the special case where k is equal to the number of samples, k-fold cross validation is
-      equal to leave-one-out cross validation. Remark that the k in k-fold cross validation is not
+      equal to leave-one-out cross validation. Please note that the k in k-fold cross validation is not
       the same k as in k nearest neighbor. They are both called k for historical reasons.
     </p>
 
@@ -561,7 +566,6 @@ user.
       makes an arbitrary, but non-random, choice. This situation practically never occurs in real
       biological data.
   </section-manual>
-  
   
 </article>
 </body>
