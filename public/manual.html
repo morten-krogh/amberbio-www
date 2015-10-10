@@ -502,17 +502,17 @@ user.
   <section-manual id="knn">
     <h1><a href="#table-of-contents">k nearest neighbor classification</a></h1>
     <p>
-      The k nearest neighbor classifier classifies samples into two or more classes. The class membership is taken from the factor.
-      A factor and at least two levels must be chosen for the classifier.
+      The k nearest neighbor classifier classifies samples into two or more classes. The class membership is taken from a factor;
+      a factor and at least two levels must be chosen for the classifier.
     </p>
 
     <p>
       Given a training set and a test sample, the k training samples with the smallest distances to
-      the test sample are found. The levels of the k nearest samples are found and if there is a
-      single level that constitutes a majority of the k samples, that level is chosen as the
+      the test sample are found. The levels of these k nearest samples are considered, and if there
+      is a single level that constitutes a majority of the k samples, that level is chosen as the
       predicted level for the test sample. If no level obtains a majority alone, the test sample is
-      unclassified. If the classifier has only two levels and k is odd, there is always a level with
-      a majority. In other cases, samples might be unclassified.
+      considered unclassified. If the classifier has only two levels and k is odd, there is always
+      one level with a majority. In other cases, samples might be unclassified.
     </p>
 
     <p>
@@ -521,15 +521,17 @@ user.
     </p>
 
     <p>
-      Three types of validation is available in the app; a fixed training set, leave-one-out cross
+      Three types of validation are available in the app; a fixed training set, leave-one-out cross
       validation, and k-fold cross validation.
     </p>
 
     <p>
       When a fixed training set is chosen, the classifier is tested on all remaining samples, both
-      those with real levels within the levels of the classifier and the samples with levels unknown
-      to the classifier. The latter type of samples will always be incorrectly classified, but it is
-      still often useful to know their predicted level.
+      those with real levels within the levels of the classifier and those with levels unknown to
+      the classifier. The latter type of samples will always be incorrectly classified, but it is
+      still often useful to know their predicted levels. For instance, if the classifier has the
+      levels "sick" and "healthy", it might be useful to get a classification of "borderline"
+      samples into either "healthy" or "sick".
     </p>
 
     <p>
@@ -541,12 +543,17 @@ user.
 
     <p>
       For k-fold cross validation, the samples are divided randomly into k subsets of more or less
-      equal size.  If the number of samples is not divisible by k, some subsets will be one sample
+      equal size; if the number of samples is not divisible by k, some subsets will be one sample
       larger than other subsets.  Each subset is tested on a classifier trained by the remaining
-      samples. In that way, each sample obtains one classified level which can be compared to the real
-      level. Cross validation only uses the samples with levels that are present in the
-      classifier. In the special case where k is equal to the number of samples, k-fold cross
-      validation is equal to leave-one-out cross validation.
+      samples. In that way, each sample obtains one classified level which can be compared to the
+      real level. Cross validation only uses the samples with levels that are present in the
+      classifier.
+    </p>
+
+    <p>
+      In the special case where k is equal to the number of samples, k-fold cross validation is
+      equal to leave-one-out cross validation. Remark that the k in k-fold cross validation is not
+      the same k as in k nearest neighbor. They are both called k for historical reasons.
     </p>
 
     <p>
