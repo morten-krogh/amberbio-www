@@ -578,7 +578,7 @@ user.
       Chang and Chih-Jen Lin, LIBSVM : a library for support vector machines. ACM Transactions on
       Intelligent Systems and Technology, 2:27:1--27:27, 2011". The LIBSVM software is available at
       http://www.csie.ntu.edu.tw/~cjlin/libsvm. The Amberbio app uses the LIBSVM library is to train
-      a svm classifier and calculate the decision values and predicted classes for test samples.
+      a SVM classifier and calculate the decision values and predicted classes for test samples.
     </p>
 
     <p>
@@ -588,8 +588,8 @@ user.
     </p>
 
     <p>
-      It is recommended to use logarithmic values for the SVM classifier. The values are used
-      directly in the classifier without scaling.
+      It is recommended to use logarithmic values for the SVM classifier. No scaling or other
+      pre-processing is performed by the app.
     </p>
 
     <p>
@@ -611,7 +611,7 @@ user.
     </p>
 
     <p>
-      The kernels are the linear kernel and the radial basis function(rbf) kernel of Gaussian
+      The kernels are the linear kernel and the radial basis function(RBF) kernel of Gaussian
       functions. The parameter C is the coefficient of the error term in the optimizing
       function. The parameter gamma is the scale parameter in the exponent of the Gaussian function.
       A proper explanation can be found in any article or book about support vector machines. The
@@ -620,11 +620,11 @@ user.
 
     <p>
       The linear kernel with default parameter is usually a good choice for biological data with
-      many molecules and fewer samples.
+      many molecules and relatively few samples.
     </p>
 
     <p>
-      Only molecules without missing values in the training and test set are used for the svm.
+      Only molecules without missing values in the training and test set are used for the SVM.
     </p>
   </section-manual>
   
