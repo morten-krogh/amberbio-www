@@ -149,6 +149,10 @@
     <div class="table-of-content-link">
       <a  href="#knn">k nearest neighbor classification</a>
     </div>
+
+    <div class="table-of-content-link">
+      <a  href="#svm">Support vector machine classification</a>
+    </div>
   </section-manual>
 
   <section-manual id="version">
@@ -565,6 +569,63 @@ user.
       In case of ambiguity in the k nearest neighbors due to ties in the distances, the classifier
       makes an arbitrary, but non-random, choice. This situation practically never occurs in real
       biological data.
+  </section-manual>
+
+  <section-manual id="svm">
+    <h1><a href="#table-of-contents">Support vector machine classification</a></h1>
+    <p>
+      The support vector machine(SVM) classification uses the software library LIBSVM: "Chih-Chung
+      Chang and Chih-Jen Lin, LIBSVM : a library for support vector machines. ACM Transactions on
+      Intelligent Systems and Technology, 2:27:1--27:27, 2011". The LIBSVM software is available at
+      http://www.csie.ntu.edu.tw/~cjlin/libsvm. The Amberbio app uses the LIBSVM library is to train
+      a svm classifier and calculate the decision values and predicted classes for test samples.
+    </p>
+
+    <p>
+      The SVM classifier in the app can compare two or more levels. A SVM can directly classify two
+      levels. Comparisons between K levels are performed by the LIBSVM library by performing all K(K
+      - 1)/2 pairwise comparisons and selecting the level that wins most pairwise comparisons.
+    </p>
+
+    <p>
+      It is recommended to use logarithmic values for the SVM classifier. The values are used
+      directly in the classifier without scaling.
+    </p>
+
+    <p>
+      For the binary classifier(two levels), a decision value is calculated. Samples with positive
+      decision values are classified in one level, and those with negative decision values in the
+      other level. Using a variable threshold instead of a fixed zero threshold, a whole curve of
+      classifiers is obtained. Plotting the true positive rate versus the false positive rate for
+      variable thresholds lead to the receiver operating characteristic(ROC) curve. The area under
+      the curve is a measure for the success of the classifier. Good classifiers have areas close to
+      1, whereas bad classifiers have areas close to 0.5.
+    </p>
+
+    <p>
+      The ROC curve applies to the binary classifier. Call the two levels A and B. The true positive
+      rate is defined as the fraction of samples with an actual level of A that are predicted to
+      have level A.  The false positive rate is defined as the fraction of samples of level B that
+      are classified as level A. The true positive rate is also called the sensitivity. The false
+      positive rate is equal to 1 - specificity.
+    </p>
+
+    <p>
+      The kernels are the linear kernel and the radial basis function(rbf) kernel of Gaussian
+      functions. The parameter C is the coefficient of the error term in the optimizing
+      function. The parameter gamma is the scale parameter in the exponent of the Gaussian function.
+      A proper explanation can be found in any article or book about support vector machines. The
+      app uses the same terminology as LIBSVM.
+    </p>
+
+    <p>
+      The linear kernel with default parameter is usually a good choice for biological data with
+      many molecules and fewer samples.
+    </p>
+
+    <p>
+      Only molecules without missing values in the training and test set are used for the svm.
+    </p>
   </section-manual>
   
 </article>
