@@ -577,14 +577,15 @@ user.
       The support vector machine(SVM) classification uses the software library LIBSVM: "Chih-Chung
       Chang and Chih-Jen Lin, LIBSVM : a library for support vector machines. ACM Transactions on
       Intelligent Systems and Technology, 2:27:1--27:27, 2011". The LIBSVM software is available at
-      http://www.csie.ntu.edu.tw/~cjlin/libsvm. The Amberbio app uses the LIBSVM library is to train
-      a SVM classifier and calculate the decision values and predicted classes for test samples.
+      http://www.csie.ntu.edu.tw/~cjlin/libsvm. The Amberbio app uses the LIBSVM library to train
+      an SVM classifier and calculate the decision values and predicted classes for test samples.
     </p>
 
     <p>
-      The SVM classifier in the app can compare two or more levels. A SVM can directly classify two
-      levels. Comparisons between K levels are performed by the LIBSVM library by performing all K(K
-      - 1)/2 pairwise comparisons and selecting the level that wins most pairwise comparisons.
+      The SVM classifier in the app can compare two or more levels. A standard SVM classifier can
+      directly classify two levels. Comparisons between K levels are performed by the LIBSVM library
+      by performing all K(K - 1)/2 pairwise comparisons and selecting the level that wins most
+      pairwise comparisons.
     </p>
 
     <p>
@@ -603,11 +604,11 @@ user.
     </p>
 
     <p>
-      The ROC curve applies to the binary classifier. Call the two levels A and B. The true positive
-      rate is defined as the fraction of samples with an actual level of A that are predicted to
-      have level A.  The false positive rate is defined as the fraction of samples of level B that
-      are classified as level A. The true positive rate is also called the sensitivity. The false
-      positive rate is equal to 1 - specificity.
+      The ROC curve only applies to the binary classifier. Call the two levels A and B. The true
+      positive rate is defined as the fraction of samples with an actual level of A that are
+      predicted to have level A.  The false positive rate is defined as the fraction of samples of
+      level B that are classified as level A. The true positive rate is also called the
+      sensitivity. The false positive rate is equal to 1 - specificity.
     </p>
 
     <p>
