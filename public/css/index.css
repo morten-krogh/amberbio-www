@@ -341,3 +341,12 @@ td, th {
 	bottom: -30px;
     }
 }
+
+.copyright-header {
+	   margin: 30px 50px 0 50px;
+}
+
+.copyright {
+	   margin: 30px 50px 50px 50px;
+	   font-size: 80%;
+}
