@@ -147,6 +147,10 @@
     </div>
 
     <div class="table-of-content-link">
+      <a  href="#supervised-classification">Supervised classification</a>
+    </div>
+
+    <div class="table-of-content-link">
       <a  href="#knn">k nearest neighbor classification</a>
     </div>
 
@@ -158,7 +162,7 @@
   <section-manual id="version">
     <h1><a href="#table-of-contents">Version</a></h1>
     <p>
-      Version 2 of the Amberbio app.
+      Version 3 of the Amberbio app.
     </p>
   </section-manual>
 
@@ -507,14 +511,53 @@ user.
     </p>
   </section-manual>
 
-  <section-manual id="knn">
-    <h1><a href="#table-of-contents">k nearest neighbor classification</a></h1>
-    <p>
-      The k nearest neighbor classifier separates samples into two or more classes. The classes are
-      the levels of a factor. The first step in the classification is to select a factor and at
-      least two levels.
+   <section-manual id="supervised-classification">
+     <h1><a href="#table-of-contents">Supervised classification</a></h1>
+     <p>
+     The supervised classifiers separate samples into two or more levels. A classifier is
+     trained on a training set and afterwards tested on a test set.
+     </p>
+
+     <p>
+       There are three modes in which the classifiers in the app can be used; a fixed training set,
+       leave-one-out cross validation, and k-fold cross validation.
+     </p>
+
+     <p>
+       When a fixed training set is chosen, the classifier is tested on all remaining samples, both
+       those with actual levels matching the levels of the classifier and those with actual levels
+       different from the levels known to the classifier. The latter type of samples can not be used
+       to estimate the predictive power of the classifier. However, often it is still useful to know
+       the predicted levels of these samples. For instance, if the classifier has the levels "sick"
+       and "healthy", it might be useful to classify "borderline" samples into either "healthy" or
+       "sick".
     </p>
 
+     <p>
+       For leave-one-out cross validation, each sample is left out and tested with the remaining
+       samples as the training set. In that way, each sample obtains one classified level which can
+       be compared to the real level. Leave-one-out classification only uses the samples with levels
+       known to the classifier.
+     </p>
+
+     <p>
+       For k-fold cross validation, the samples are divided randomly into k subsets of almost
+       equal size; if the number of samples is not divisible by k, some subsets will be one sample
+       larger than other subsets.  Each subset is tested on a classifier trained by the remaining
+       samples. In that way, each sample obtains one classified level which can be compared to the
+       real level. Cross validation only uses the samples with levels that are known to the
+       classifier.
+     </p>
+
+     <p>
+       In the special case where k is equal to the number of samples, k-fold cross validation is
+       equal to leave-one-out cross validation. Leave-one-out cross validation has its own selection
+       in the app because of it importance.
+     </p>
+   </section-manual>
+    
+  <section-manual id="knn">
+    <h1><a href="#table-of-contents">k nearest neighbor classification</a></h1>
     <p>
       Given a training set and a test sample, the k training samples with the smallest distances to
       the test sample are found. The levels of these k nearest samples are considered, and if there
@@ -530,45 +573,10 @@ user.
     </p>
 
     <p>
-      Three types of validation are available in the app; a fixed training set, leave-one-out cross
-      validation, and k-fold cross validation.
-    </p>
-
-    <p>
-      When a fixed training set is chosen, the classifier is tested on all remaining samples, both
-      those with actual levels matching the levels of the classifier and those with actual levels
-      different from the levels known to the classifier. The latter type of samples will always be
-      incorrectly classified. However, often it is still useful to know their predicted levels. For
-      instance, if the classifier has the levels "sick" and "healthy", it might be useful to
-      classify "borderline" samples into either "healthy" or "sick".
-    </p>
-
-    <p>
-      For leave-one-out cross validation, each sample is left out and tested with the remaining
-      samples as the training set. In that way, each sample obtains one classified level which can
-      be compared to the real level. Leave-one-out classification only uses the samples with levels
-      known to the classifier.
-    </p>
-
-    <p>
-      For k-fold cross validation, the samples are divided randomly into k subsets of almost
-      equal size; if the number of samples is not divisible by k, some subsets will be one sample
-      larger than other subsets.  Each subset is tested on a classifier trained by the remaining
-      samples. In that way, each sample obtains one classified level which can be compared to the
-      real level. Cross validation only uses the samples with levels that are known to the
-      classifier.
-    </p>
-
-    <p>
-      In the special case where k is equal to the number of samples, k-fold cross validation is
-      equal to leave-one-out cross validation. Please note that the k in k-fold cross validation is not
-      the same k as in k nearest neighbor. They are both called k for historical reasons.
-    </p>
-
-    <p>
       In case of ambiguity in the k nearest neighbors due to ties in the distances, the classifier
       makes an arbitrary, but non-random, choice. This situation practically never occurs in real
       biological data.
+    </p>
   </section-manual>
 
   <section-manual id="svm">
