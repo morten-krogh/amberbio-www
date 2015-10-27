@@ -157,12 +157,17 @@
     <div class="table-of-content-link">
       <a  href="#svm">Support vector machine classification</a>
     </div>
+
+    <div class="table-of-content-link">
+      <a  href="#k-means-clustering">k means clustering</a>
+    </div>
+
   </section-manual>
 
   <section-manual id="version">
     <h1><a href="#table-of-contents">Version</a></h1>
     <p>
-      Version 3 of the Amberbio app.
+      Version 4 of the Amberbio app.
     </p>
   </section-manual>
 
@@ -679,7 +684,40 @@ user.
       Only molecules without missing values in the training and test sets are used for the SVM.
     </p>
   </section-manual>
-  
+
+  <section-manual id="k-means-clustering">
+    <h1><a href="#table-of-contents">k means clustering</a></h1>
+    <p>
+      K means clustering is an unsupevised method that divides the samples into k groups.  The
+      number of clusters, k, is user determined. The algorithm employed by the app is probabilistic
+      and might give different results for several runs on the same data set. However, the results
+      should be similar, and the difference will be due to movement of samples whose group membership is uncertain.
+      Since there is no correct clustering, the probabilistic nature of the algorithm is acceptable.
+    </p>
+
+    <p>
+      The algorithm is a variation of the standard Lloyd algorithm. The steps ar described below.
+
+      1. Assign the samples to random clusters.  
+
+      2. Resolve empty clusters by moving samples from
+      the largest cluster to empty clusters.  
+
+      3. Iterate the following steps until the clusters are
+      constant or a maximum limit is reached. In practice, the maximum limit is almost never needed.
+
+         3a Calculate centroids as the average point in each cluster.
+         3b Reassign samples to clusters. A sample belongs to the cluster whose centroid is closest.
+         3c. Resolve empty clusters by moving samples from the largest cluster to empty clusters.
+
+      4. Calculate the sum of square deviation of samples from their cluster centroid.
+
+      Iterate over the entire cluster algorithm, and take the clustering with the smallest sum of square deviation as the final result.
+      The number of iterations is dynamic and depends on the time it takes. The app should never become unresponsive by being stuck in a long computation. 
+    </p>
+
+  </section-manual>
+
 </article>
 </body>
 </html>
