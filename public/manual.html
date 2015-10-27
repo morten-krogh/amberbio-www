@@ -688,33 +688,42 @@ user.
   <section-manual id="k-means-clustering">
     <h1><a href="#table-of-contents">k means clustering</a></h1>
     <p>
-      K means clustering is an unsupevised method that divides the samples into k groups.  The
-      number of clusters, k, is user determined. The algorithm employed by the app is probabilistic
-      and might give different results for several runs on the same data set. However, the results
-      should be similar, and the difference will be due to movement of samples whose group membership is uncertain.
-      Since there is no correct clustering, the probabilistic nature of the algorithm is acceptable.
+      K means clustering is an unsupervised clustering algorithm that divides the samples into k
+      groups. The number of clusters, k, is user determined. The algorithm employed by the app is
+      probabilistic and might give different results for several runs on the same data set. However,
+      the results will be similar, and the differences are explained by movement of samples whose
+      group membership is ambiguous. Since there is no unique biologically correct clustering in
+      any case, the probabilistic nature of the algorithm is acceptable.
     </p>
 
     <p>
-      The algorithm is a variation of the standard Lloyd algorithm. The steps ar described below.
-
-      1. Assign the samples to random clusters.  
-
-      2. Resolve empty clusters by moving samples from
-      the largest cluster to empty clusters.  
-
-      3. Iterate the following steps until the clusters are
-      constant or a maximum limit is reached. In practice, the maximum limit is almost never needed.
-
-         3a Calculate centroids as the average point in each cluster.
-         3b Reassign samples to clusters. A sample belongs to the cluster whose centroid is closest.
-         3c. Resolve empty clusters by moving samples from the largest cluster to empty clusters.
-
-      4. Calculate the sum of square deviation of samples from their cluster centroid.
-
-      Iterate over the entire cluster algorithm, and take the clustering with the smallest sum of square deviation as the final result.
-      The number of iterations is dynamic and depends on the time it takes. The app should never become unresponsive by being stuck in a long computation. 
+      The algorithm is almost identical to the standard Lloyd algorithm. The steps are described below.
     </p>
+
+    <ul style="list-style-type:none">
+      <li>
+	Iterate over the entire cluster algorithm below, and take the clustering with the smallest
+	sum of square deviation as the final result.  The number of iterations is dynamic and
+	depends on the duration for one iteration. The app should never become unresponsive by being
+	stuck in a long computation.
+      </li>
+
+      <li>
+	<ul style="list-style-type:none">
+	  <li>Assign the samples to random clusters.</li>
+	  <li>Resolve empty clusters by moving samples from the largest cluster to empty clusters.</li>
+	  <li>Iterate the following steps until the clusters are constant or a maximum limit is reached. In practice, the maximum limit is almost never needed.</li>
+	  <li>
+	    <ul style="list-style-type:none">
+	      <li>Calculate centroids as the average point in each cluster.</li>
+	      <li>Reassign samples to clusters. A sample belongs to the cluster whose centroid is closest.</li>
+	      <li>Resolve empty clusters by moving samples from the largest cluster to the empty clusters.
+	    </ul>
+	  </li>
+	  <li>Calculate the sum of square deviation of samples from their cluster centroid.</li>
+	</ul>
+      </li>
+    </ul>
 
   </section-manual>
 

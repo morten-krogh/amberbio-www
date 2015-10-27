@@ -350,3 +350,11 @@ td, th {
 	   margin: 30px 50px 50px 50px;
 	   font-size: 80%;
 }
+
+ul {
+   margin: 20px 10px 20px 10px;
+}
+
+li {
+   margin: 20px 10px 20px 10px;
+}
