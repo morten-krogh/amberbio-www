@@ -58,7 +58,7 @@
 </header>
 
 <article>
-  <section-manual>
+  <section class="manual">
     <h1>Manual for the Amberbio app</h1>
 
     <p>
@@ -73,9 +73,9 @@
       This manual is available in the app and on the web
       at <a href="http://www.amberbio.com/manual">www.amberbio.com/manual</a>.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual>
+  <section class="manual">
     <h1 id="table-of-contents">Table of contents</h1>
 
     <div class="table-of-content-link">
@@ -162,33 +162,37 @@
       <a  href="#k-means-clustering">k means clustering</a>
     </div>
 
-  </section-manual>
+    <div class="table-of-content-link">
+      <a  href="#sammon">Sammon map</a>
+    </div>
 
-  <section-manual id="version">
+  </section>
+
+  <section class="manual" id="version">
     <h1><a href="#table-of-contents">Version</a></h1>
     <p>
       Version 4 of the Amberbio app.
     </p>
-  </section-manual>
+  </div>
 
-  <section-manual id="privacy">
+  <section class="manual" id="privacy">
     <h1><a href="#table-of-contents">Privacy</a></h1>
     <p>
       All data is stored locally on the device. All calculations are performed locally. Amber
       Biosciences does not have any access to user data.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="navigation">
+  <section class="manual" id="navigation">
     <h1><a href="#table-of-contents">Navigation</a></h1>
     <p>
       The app has a home page that is reached by tapping the home icon in the upper left
       corner. Navigation is done from the home page by tapping the icons or by the back and forward
       buttons.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="projects-and-data-sets">
+  <section class="manual" id="projects-and-data-sets">
     <h1><a href="#table-of-contents">Projects and data sets</a></h1>
     <p>
       The app handles projects and data sets. A data set is a set of values organized in a table
@@ -216,9 +220,9 @@
       molecule annotations. An example could be the molecule annotation "Chromosome" where each
       molecule has a value such as "chromosome 21".
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="the-active-data-set">
+  <section class="manual" id="the-active-data-set">
     <h1><a href="#table-of-contents">The active data set</a></h1>
     <p>
       Analysis is performed on the active data set. Selection of the active data set is done on the
@@ -233,9 +237,9 @@
      the app automatically makes the new data set active and jumps to the
      page <span class="app-page">Data Set Selection</span>
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="import-of-data">
+  <section class="manual" id="import-of-data">
     <h1><a href="#table-of-contents">Import of data</a></h1>
     <p>
       Data import is used to create new projects and to add factor and molecule annotation
@@ -249,9 +253,9 @@
 files can be seen on this page.  The app keeps all imported files until they are deleted by the
 user.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="import-of-files">
+  <section class="manual" id="import-of-files">
     <h1><a href="#table-of-contents">Import of files</a></h1>
     <p>
       The app can import files with extension "txt" or "sqlite". The "txt" files represent tables of
@@ -276,9 +280,9 @@ user.
       page <span class="app-page">Import data</span>. The corresponding cloud storage app must
       itself be installed on the device.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="parsing-import-files">
+  <section class="manual" id="parsing-import-files">
     <h1><a href="#table-of-contents">Parsing import files</a></h1>
     <p>
       Imported files are shown on the page <span class="app-page">Import data</span>. By tapping a
@@ -287,9 +291,9 @@ user.
       create a new project, to import factors to the active project, or to import molecule
       annotations to the active project.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="file-format-of-txt-files">
+  <section class="manual" id="file-format-of-txt-files">
     <h1><a href="#table-of-contents">File format of txt files</a></h1>
     <p>
       The "txt" files contain tables of values. The rows, or lines, are separated by "\n", "\r", or
@@ -403,9 +407,9 @@ user.
         <td>10</td>
       </tr>
     </table>
-  </section-manual>
+  </section>
 
-  <section-manual id="result-files">
+  <section class="manual" id="result-files">
     <h1><a href="#table-of-contents">Result files</a></h1>
     <p>
       Result files are created by the app. The result files are figures and tables and have the file
@@ -413,9 +417,9 @@ user.
       <span class="app-page">Result files</span>. The result files can be sent by email, opened in
       another app, or exported to a cloud storage.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="backup-and-sharing-of-projects">
+  <section class="manual" id="backup-and-sharing-of-projects">
     <h1><a href="#table-of-contents">Backup and sharing of projects</a></h1>
     <p>
       Projects can be exported to a database file on the page <span class="app-page">Export
@@ -423,9 +427,9 @@ user.
       and transfer of projects to other devices. The file can be sent by email or exported to a
       cloud storage.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="name-and-emails">
+  <section class="manual" id="name-and-emails">
     <h1><a href="#table-of-contents">Name and emails</a></h1>
     <p>
       On the page <span class="app-page">User</span>, a name and a list of emails can be
@@ -434,9 +438,9 @@ user.
       email from the app. The actual destination emails can always be changed before sending the
       email.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="anova">
+  <section class="manual" id="anova">
     <h1><a href="#table-of-contents">Anova</a></h1>
     <p>
       The Anova test is performed on the selected levels of a factor. The selected levels are
@@ -445,9 +449,9 @@ user.
       calculating the F-statistic as the ratio of between-groups variation divided by the
       within-groups variation. The p-value is the upper tail of the cumulative F-distribution.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="pairwise-test">
+  <section class="manual" id="pairwise-test">
     <h1><a href="#table-of-contents">Pairwise test</a></h1>
     <p>
       After selecting a factor, any number of pairwise tests between two levels can be selected in
@@ -457,9 +461,9 @@ user.
       size and by the Normal distribution approximation for large sample sizes.  The p-values are
       two-sided.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="paired-test">
+  <section class="manual" id="paired-test">
     <h1><a href="#table-of-contents">Paired test</a></h1>
     <p>
       A pairing factor must be selected. Samples with the same level for the pairing factor can be
@@ -481,9 +485,9 @@ user.
       comparison levels. The p-value is two-sided and tests the null hypothesis that the difference
       between the comparison levels is zero.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="linear-regression">
+  <section class="manual" id="linear-regression">
     <h1><a href="#table-of-contents">Linear regression</a></h1>
     <p>
       For the selected factor, the levels with a numeric interpretation are chosen. A level can be
@@ -501,9 +505,9 @@ user.
       large F-statistic, and correspondingly low p-value, implies that the line is a much better fit
       than a single mean value.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="multiple-hypothesis-testing">
+  <section class="manual" id="multiple-hypothesis-testing">
     <h1><a href="#table-of-contents">Multiple hypothesis testing</a></h1>
     <p>
       Multiple hypothesis testing is performed using the Benjamini-Hochberg false discovery rate
@@ -514,9 +518,9 @@ user.
       A histogram of the p-values can be seen by tapping "histogram". High frequencies for the low
       p-values imply a significant difference between the groups.
     </p>
-  </section-manual>
+  </section>
 
-   <section-manual id="supervised-classification">
+   <section class="manual" id="supervised-classification">
      <h1><a href="#table-of-contents">Supervised classification</a></h1>
      <p>
      The supervised classifiers separate samples into two or more levels. A classifier is
@@ -559,9 +563,9 @@ user.
        equal to leave-one-out cross validation. Leave-one-out cross validation has its own selection
        in the app because of it importance.
      </p>
-   </section-manual>
+   </section>
     
-  <section-manual id="knn">
+  <section class="manual" id="knn">
     <h1><a href="#table-of-contents">k nearest neighbor classification</a></h1>
     <p>
       Given a training set and a test sample, the k training samples with the smallest distances to
@@ -582,9 +586,9 @@ user.
       makes an arbitrary, but non-random, choice. This situation practically never occurs in real
       biological data.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="svm">
+  <section class="manual" id="svm">
     <h1><a href="#table-of-contents">Support vector machine classification</a></h1>
     <p>
       The support vector machine (SVM) classification uses the software library LIBSVM: "Chih-Chung
@@ -683,9 +687,9 @@ user.
     <p>
       Only molecules without missing values in the training and test sets are used for the SVM.
     </p>
-  </section-manual>
+  </section>
 
-  <section-manual id="k-means-clustering">
+  <section class="manual" id="k-means-clustering">
     <h1><a href="#table-of-contents">k means clustering</a></h1>
     <p>
       K means clustering is an unsupervised clustering algorithm that divides the samples into k
@@ -724,8 +728,42 @@ user.
 	</ul>
       </li>
     </ul>
+  </section>
 
-  </section-manual>
+  <section class="manual" id="sammon">
+        <h1><a href="#table-of-contents">Sammon map</a></h1>
+	<p>
+	  The Sammon map is a projection of the high dimensional samples to a low dimensional space.
+	  The map was invented by J. W. Sammon in 1969. In this app the low dimensional space is two
+	  or three dimensional such that the samples can be visualized. The projection attempts to
+	  preserve the pairwise distances between samples as much as possible. 
+	</p>
+
+	<p>
+	  The distances in the high dimensional space are Euclidean distances using only the
+	  molecules without missing values for the selected samples. The algorithm is described by
+	  by Kohonen ( T. Kohonen. Self Organizing Maps. Springer, 3 edition, 2001) and is
+	  iterative. The number of iterations depend on the time of one iteration; the app will never
+	  go into a long computation.
+	</p>
+
+	<p>
+	  At each iteration, the algorithm loops over all pairs of samples and updates the two
+	  samples.  The update moves the two points directly away from each other if their distance
+	  is too small, and moves them towards each other if it is to large.  The size of the
+	  movement depends on the current distances and a variable multiplier. The multiplier starts
+	  at 0.4 and ends at a small value. The multiplier is reduced at each iteration.
+	</p>
+
+	<p>
+	  The purpose of the Sammon map is to obtain a visualization of the samples and hopefully
+	  gain some biological insight. The Sammon map is an alternative to the PCA map. The Sammon
+	  map has the property that samples close to each other remain close after the projection.
+	</p>
+
+  </section>
+
+
 
 </article>
 </body>
